@@ -9,7 +9,8 @@ function genClick() {
     incrementNumber();
     $('#appendHere').append(`
         <div class="gen">
-            <p>${incNum}</p>
+            <p> You have pressed the button
+            ${incNum} times!</p>
             <button class="swapButton">
                 Swap
             </button>
@@ -26,11 +27,12 @@ return incNum;
 }
 
 function swapper() {
-  console.log('butt');
+  console.log($(this).parent());
+  $(this).parent().toggleClass('yellow');
   
 }
 
 function deleter () {
-    console.log('deleter');
+    $(this).parent().empty();
     
 }
